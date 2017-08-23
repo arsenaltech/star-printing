@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = ['StarIO.framework', 'StarIO_Extension.framework']
   s.header_mappings_dir = 'StarIO'
   s.frameworks          = ['ExternalAccessory', 'CoreBluetooth']
+  s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/StarPrinting"' }
 
   s.dependency 'CocoaLumberjack'
 end
