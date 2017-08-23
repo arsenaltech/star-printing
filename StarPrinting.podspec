@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/greenbits/star-printing.git", :tag => '0.1.1' }
   s.requires_arc        = true
   s.source_files        = 'StarPrinting/*.{h,m}'
-  s.platform            = :ios, '7.0'
+  s.platform            = :ios, '8.0'
   s.preserve_paths      = 'StarIO*.framework'
-  s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/StarPrinting"' }
   s.vendored_frameworks = ['StarIO.framework', 'StarIO_Extension.framework']
   s.header_mappings_dir = 'StarIO'
+  s.frameworks          = ['ExternalAccessory', 'CoreBluetooth']
 
   s.dependency 'CocoaLumberjack'
 end
