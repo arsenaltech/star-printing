@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "StarPrinting"
-  s.version             = "0.1.1"
+  s.version             = "0.1.2"
   s.summary             = "Star print queue and persistence for iOS and Mac"
   s.homepage            = "https://github.com/opentable/star-printing"
   s.license             = 'MIT'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform            = :ios, '7.0'
   s.preserve_paths      = 'StarIO*.framework'
   s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/StarPrinting"' }
-  s.vendored_frameworks = ['StarIO.framework', 'StarIO_Extension.framework']
+  s.vendored_frameworks = ['StarIO.framework', 'StarIO_Extension.framework', 'SMCloudServices.framework']
   s.header_mappings_dir = 'StarIO'
 
   s.dependency 'CocoaLumberjack'

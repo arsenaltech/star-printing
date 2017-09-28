@@ -9,7 +9,7 @@
 #import "PrintCommands.h"
 #import "PrintParser.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <StarIO/Port.h>
+#import <StarIO/SMPort.h>
 #import <StarIO_Extension/StarIoExt.h>
 #import <objc/runtime.h>
 
