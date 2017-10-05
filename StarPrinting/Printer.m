@@ -405,7 +405,7 @@ static BOOL heartbeatEnabled = YES;
         BOOL error = !portConnected || !self.isReadyToPrint;
 
         if (!error) {
-            ISCBBuilder *builder = [StarIoExt createCommandBuilder:StarIoExtEmulationStarGraphic];
+            ISCBBuilder *builder = [StarIoExt createCommandBuilder:StarIoExtEmulationStarPRNT];
 
             [builder beginDocument];
 
