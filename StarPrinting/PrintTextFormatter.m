@@ -7,6 +7,7 @@
 //
 
 #import "PrintTextFormatter.h"
+#import <StarIO_Extension/StarIoExt.h>
 
 @interface PrintTextFormatter ()
 
@@ -131,7 +132,10 @@
 
 - (void)barcode:(NSString *)text type:(PrinterBarcodeType)type
 {
-    [self add:kPrinterCMD_StartBarcode];
+    ISCBBuilder *builder = [StarIoExt createCommandBuilder:StarIoExtEmulationStarPRNT];
+    NSString* barcodeText = [NSString stringWithFormat:@"{B%@", text];
+    [builder appendBarcodeData:[barcodeText dataUsingEncoding:NSASCIIStringEncoding] symbology:SCBBarcodeSymbologyCode128 width:SCBBarcodeWidthMode2 height:40 hri:YES];
+    [_commands appendData: [builder.commands copy]];
 }
 
 #pragma mark - Helpers
