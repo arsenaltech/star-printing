@@ -95,7 +95,7 @@ typedef enum PrintFormatElementType
             [_formatter add:kPrinterCMD_AlignRight];
             break;
         case PrintFormatElementTypeBarcode:
-            [_formatter add:kPrinterCMD_StartBarcode];
+            //[_formatter add:kPrinterCMD_StartBarcode];
             break;
         default:
             break;
