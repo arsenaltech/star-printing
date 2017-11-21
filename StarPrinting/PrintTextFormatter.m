@@ -132,7 +132,7 @@
 
 - (void)barcode:(NSString *)text type:(PrinterBarcodeType)type
 {
-    ISCBBuilder *builder = [StarIoExt createCommandBuilder:StarIoExtEmulationStarPRNT];
+    ISCBBuilder *builder = [StarIoExt createCommandBuilder:StarIoExtEmulationStarLine];
     NSString* barcodeText = [NSString stringWithFormat:@"{B%@", text];
     [builder appendBarcodeData:[barcodeText dataUsingEncoding:NSASCIIStringEncoding] symbology:SCBBarcodeSymbologyCode128 width:SCBBarcodeWidthMode2 height:40 hri:YES];
     [_commands appendData: [builder.commands copy]];
